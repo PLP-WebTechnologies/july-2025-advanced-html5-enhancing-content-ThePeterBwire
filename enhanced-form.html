@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Content & Form Mastery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        form {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        fieldset {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+        legend {
+            padding: 0 10px;
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .form-row {
+            display: flex;
+            gap: 15px;
+        }
+        .form-group {
+            flex: 1;
+        }
+        video, audio {
+            width: 100%;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HTML5 Content & Form Demonstration</h1>
+        <p>Showcasing advanced HTML5 features for content organization and form validation</p>
+    </header>
+
+    <section id="lists">
+        <h2>Content Organization with Lists</h2>
+        
+        <h3>Ordered List (Steps to Learn HTML5)</h3>
+        <ol>
+            <li>Understand basic HTML structure</li>
+            <li>Learn semantic elements
+                <ul>
+                    <li>header, nav, main, section</li>
+                    <li>article, aside, footer</li>
+                </ul>
+            </li>
+            <li>Master forms and validation</li>
+            <li>Practice with multimedia elements</li>
+        </ol>
+        
+        <h3>Unordered List (Web Technologies)</h3>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>Web APIs</li>
+        </ul>
+        
+        <h3>Description List (HTML5 Terms)</h3>
+        <dl>
+            <dt>Semantic Elements</dt>
+            <dd>Elements that clearly describe their meaning to both browser and developer</dd>
+            
+            <dt>Form Validation</dt>
+            <dd>The process of ensuring user input meets specified requirements</dd>
+        </dl>
+    </section>
+
+    <section id="tables">
+        <h2>Data Presentation with Tables</h2>
+        
+        <table>
+            <caption>Web Browser Market Share (2023)</caption>
+            <thead>
+                <tr>
+                    <th>Browser</th>
+                    <th>Market Share</th>
+                    <th>HTML5 Support</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Chrome</td>
+                    <td>65.8%</td>
+                    <td>Excellent</td>
+                </tr>
+                <tr>
+                    <td>Safari</td>
+                    <td>18.3%</td>
+                    <td>Excellent</td>
+                </tr>
+                <tr>
+                    <td>Edge</td>
+                    <td>4.2%</td>
+                    <td>Excellent</td>
+                </tr>
+                <tr>
+                    <td>Firefox</td>
+                    <td>3.2%</td>
+                    <td>Excellent</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">Data source: StatCounter Global Stats</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+    <section id="media">
+        <h2>Multimedia Content</h2>
+        
+        <h3>Image with Figure/Figcaption</h3>
+        <figure>
+            <img src="https://via.placeholder.com/800x400" alt="Placeholder image demonstrating HTML5 features" width="800" height="400">
+            <figcaption>Example of semantic HTML5 markup structure</figcaption>
+        </figure>
+        
+        <h3>Video Element</h3>
+        <video controls width="800" poster="https://via.placeholder.com/800x450">
+            <source src="sample.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <h3>Audio Element</h3>
+        <audio controls>
+            <source src="sample.ogg" type="audio/ogg">
+            Your browser does not support the audio element.
+        </audio>
+    </section>
+
+    <section id="form">
+        <h2>HTML5 Form with Native Validation</h2>
+        
+        <form id="registration" action="/submit" method="post" novalidate>
+            <fieldset>
+                <legend>Personal Information</legend>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstname">First Name *</label>
+                        <input type="text" id="firstname" name="firstname" required minlength="2" 
+                               placeholder="Enter your first name" autocomplete="given-name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="lastname">Last Name *</label>
+                        <input type="text" id="lastname" name="lastname" required minlength="2" 
+                               placeholder="Enter your last name" autocomplete="family-name">
+                    </div>
+                </div>
+                
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required 
+                       placeholder="your.email@example.com" autocomplete="email">
+                
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" 
+                       placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                       title="Please enter a valid phone number (123-456-7890)">
+                
+                <label for="birthdate">Date of Birth</label>
+                <input type="date" id="birthdate" name="birthdate" max="2023-12-31">
+                
+                <label for="website">Your Website</label>
+                <input type="url" id="website" name="website" 
+                       placeholder="https://example.com">
+            </fieldset>
+            
+            <fieldset>
+                <legend>Account Details</legend>
+                
+                <label for="username">Username *</label>
+                <input type="text" id="username" name="username" required minlength="4" 
+                       placeholder="Choose a username" autocomplete="username">
+                
+                <label for="password">Password *</label>
+                <input type="password" id="password" name="password" required minlength="8" 
+                       placeholder="Create a password" autocomplete="new-password"
+                       pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                       title="Must contain at least one number, one uppercase and lowercase letter, and at least 8 characters">
+                
+                <label for="confirm-password">Confirm Password *</label>
+                <input type="password" id="confirm-password" name="confirm-password" required 
+                       placeholder="Re-enter your password" autocomplete="new-password">
+            </fieldset>
+            
+            <fieldset>
+                <legend>Preferences</legend>
+                
+                <label for="interests">Interests (Select multiple)</label>
+                <select id="interests" name="interests" multiple size="4">
+                    <option value="webdev">Web Development</option>
+                    <option value="design">Design</option>
+                    <option value="marketing">Digital Marketing</option>
+                    <option value="seo">SEO</option>
+                </select>
+                
+                <label>Preferred Contact Method</label>
+                <div>
+                    <input type="radio" id="contact-email" name="contact" value="email" checked>
+                    <label for="contact-email" style="display: inline;">Email</label>
+                    
+                    <input type="radio" id="contact-phone" name="contact" value="phone">
+                    <label for="contact-phone" style="display: inline;">Phone</label>
+                    
+                    <input type="radio" id="contact-text" name="contact" value="text">
+                    <label for="contact-text" style="display: inline;">Text Message</label>
+                </div>
+                
+                <label>Newsletter Subscription</label>
+                <div>
+                    <input type="checkbox" id="newsletter" name="newsletter" checked>
+                    <label for="newsletter" style="display: inline;">Subscribe to our newsletter</label>
+                </div>
+                
+                <label for="notifications">Notification Frequency</label>
+                <input type="range" id="notifications" name="notifications" min="0" max="10" value="5">
+            </fieldset>
+            
+            <fieldset>
+                <legend>Additional Information</legend>
+                
+                <label for="bio">Short Bio</label>
+                <textarea id="bio" name="bio" rows="4" 
+                          placeholder="Tell us about yourself (max 200 characters)" maxlength="200"></textarea>
+                
+                <label for="avatar">Profile Picture</label>
+                <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
+                
+                <label for="color">Favorite Color</label>
+                <input type="color" id="color" name="color" value="#3366ff">
+            </fieldset>
+            
+            <div style="text-align: center;">
+                <button type="submit">Submit Registration</button>
+                <button type="reset">Reset Form</button>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2023 HTML5 Demonstration. All rights reserved.</p>
+        <address>
+            Contact: <a href="mailto:info@example.com">info@example.com</a>
+        </address>
+    </footer>
+</body>
+</html>
